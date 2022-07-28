@@ -131,7 +131,7 @@ let listTasks = () => {
 // funcion que recupera los datos del localstorage
 (() => {
     data = JSON.parse(localStorage.getItem("data")) || [];
-    createTasks();
+    createTask();
     console.log(data);
     
 })();
