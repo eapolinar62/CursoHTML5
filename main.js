@@ -110,24 +110,6 @@ let editTask = (e) => {
 };
 
 
-
-let listTasks = () => {
-
-    data.map((x, y) => {
-        return (tasks.innerHTML += `
-            <div>
-                <span class="fw-bold">${x.text}</span>
-                <span class="small text-secundary">${x.date}</span>
-                <p>${x.textarea}</p>
-                <span class="options">
-                    <i onclick = "editTask(this)" data-bs-toggle="modal" data-bs-target="#form" class="fa-solid fa-pen-to-square"></i>
-                    <i onclick ="deleteTask(this)" class="fa-solid fa-trash-can"></i>
-                </span>
-            </div>`);
-    });
-    
-};
-
 // funcion que recupera los datos del localstorage
 (() => {
     data = JSON.parse(localStorage.getItem("data")) || [];
